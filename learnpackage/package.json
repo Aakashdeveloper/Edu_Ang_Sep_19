@@ -1,0 +1,20 @@
+{
+  "name": "learnpackage",
+  "version": "1.0.0",
+  "description": "this is learn package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "npm",
+    "node"
+  ],
+  "author": "Edureka",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "zone.js": "^0.10.2"
+  }
+}

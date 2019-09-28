@@ -1,0 +1,72 @@
+https://code.visualstudio.com/
+https://nodejs.org/en/
+https://github.com/Aakashdeveloper?tab=repositories
+https://git-scm.com/downloads
+
+
+JSON=> JavaScript Object Notation
+[
+    {
+        "name":"a",
+        "class":"b"
+    },
+    {
+        "name":"aa",
+        "class":"bb"
+    }
+]
+
+/*************************
+    Check Node version
+*************************/
+node -v
+
+
+/*************************
+   Step to create package.json
+*************************/
+> Navigate to the folder using cmd/terminal
+> npm init
+> Answer all question
+> type 'yes'
+
+
+/*************************
+   Install local package
+*************************/
+> Navigate to the folder using cmd/terminal
+> npm install zone.js --save/ npm install zone.js/ npm i zone.js
+
+/*************************
+   Install Global package
+*************************/
+window
+> run cmd as admin
+> npm i -g @aakashdeveloper/create-node-app
+
+mac/linux
+> open terminal
+> sudo npm i -g @aakashdeveloper/create-node-app
+
+/*************************
+   Step to setup angular
+*************************/
+window
+> run cmd as admin
+> npm i -g @angular/cli
+
+mac/linux
+> open terminal
+> sudo npm i -g @angular/cli
+
+
+> Navigate to the folder using cmd/terminal
+> ng new firstapp
+> cd firstapp
+> npm start
+> http://localhost:4200
+
+> html
+> css
+> bootstrap
+> JavaScript
