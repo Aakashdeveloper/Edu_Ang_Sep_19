@@ -70,3 +70,54 @@ mac/linux
 > css
 > bootstrap
 > JavaScript
+
+/*************************
+  Component in angular
+*************************/
+Module    => This contain information of all the component,pipe,service and Routing
+             Here we have to declare all other blocks
+             We can n number modules but there is one parent module
+              => NgModule
+              
+Component => This will contains all the logic, html, css
+             We can n number component but there is one parent component  
+             => Component      
+Pipe      => This help to do run time data manuplution/ data change  
+                => Pipe, PipeTarnsfor       
+Services  => All the external connections like APi class 
+                => Injectable
+Routing   => All page navigation
+                =>Route
+
+
+angular.json => main.ts  => mainModule(App.module) => mainComponent(App.component)
+
+index.html
+
+
+ /*template: `<div>
+                <h1>My Ang App</h1>
+                <app-home></app-home>
+               </div>`*/
+
+/*********************
+    Bindings in Angular
+********************/
+
+One Way Binding
+> Data Binding    {{}}
+> Property Binding []
+> Event Binding    ()
+Two Way Binding   [()]
+
+
+/*******************
+Structrual directive
+*********************/
+ng-for 
+ng-if
+
+
+let
+var
+const

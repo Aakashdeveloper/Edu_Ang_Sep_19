@@ -1,0 +1,43 @@
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+       {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+        </div>
+
+        <div class="table-responnsive">
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>
+                            <button class="btn btn-danger"
+                            (click)="toggleImage()">
+                                Show Image
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{showTable}}
+                    <tr *ngFor="let prod of products">
+                        <td>
+                            {{prod.productName}}
+                        </td>
+                        <td>
+                            <img [src]="prod.imageUrl" *ngIf="showTable"/>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+</div>
