@@ -121,3 +121,69 @@ ng-if
 let
 var
 const
+
+uppercase
+lowercase
+titlecase
+currency
+date
+perctange
+
+
+/***************
+    Function
+*****************/
+function add(a,b){
+    return a+b
+}
+
+var add = (a,b) => {
+    return a+b
+}
+
+var age = [32, 33, 16, 40]
+undefined
+age.indexOf(33)
+1
+age.indexOf(16)
+2
+age.indexOf(18)
+-1
+age.indexOf(20)
+-1
+
+var a = 10
+
+var a; == declare
+a = 10 == assignment
+
+
+var = Redecalre & reassign
+let = Cannot Redecalre but can reassign
+const = Cannot Redecalre nor reassign
+
+var a = 10
+undefined
+a
+10
+a > 10 ? "hii":"bie"
+"bie"
+a == 10 ? "hii":"bie"
+"hii"
+
+
+var ages = [0,1,2,3,4]
+ages.filter((age) => { return age*1})
+ages.map((age) => { return age*1});
+
+
+var ages = [0,1,2,3,4]
+ages.filter((age) => { return age*1})
+(4) [1, 2, 3, 4]
+ages.map((age) => { return age*1})
+(5) [0, 1, 2, 3, 4]
+
+
+
+rxjs observable
+observable vs promisses

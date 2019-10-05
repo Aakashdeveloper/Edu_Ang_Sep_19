@@ -5,34 +5,52 @@
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-4"></div>
+            <div class="col-md-2 texttitle">
+                Filter By:
+            </div>
+            <div class="col-md-4">
+                <input type="text" placeholder="enter your text"
+                [(ngModel)]="userSearch"/>
+            </div>
         </div>
         <div class="row">
+            <div class="col-md-6">
+                <h3>{{userSearch}}</h3>
+            </div>
+
         </div>
 
         <div class="table-responnsive">
             <table class="table" >
                 <thead>
-                    <tr>
-                        <th>Name</th>
+                    <tr style="color:teal">
+                      
                         <th>
                             <button class="btn btn-danger"
                             (click)="toggleImage()">
                                 Show Image
                             </button>
                         </th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Rating</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{showTable}}
-                    <tr *ngFor="let prod of products">
-                        <td>
-                            {{prod.productName}}
-                        </td>
+                    <tr *ngFor="let prod of products | productSearch:userSearch">
                         <td>
                             <img [src]="prod.imageUrl" *ngIf="showTable"/>
                         </td>
+                        <td>
+                            {{prod.productName | myupper:'upper'}}
+                        </td>
+                        <td>{{prod.productCode | myupper:'lower'}}</td>
+                        <td>{{prod.releaseDate | date}}</td>
+                        <td>{{prod.price| discount:5   | currency:'GBP' }}</td>
+                        <td>{{prod.starRating}}</td>
+
                     </tr>
                 </tbody>
 
