@@ -1,6 +1,7 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
@@ -8,6 +9,8 @@ import { ProductComponent } from './products/product.component';
 import { MyUpperPipe } from './products/myUpper.pipe';
 import { DiscountPipe } from './products/discount.pipe';
 import { ProductSearchPipe } from './products/productSearch.pipe';
+import { ProductService } from './products/prodduct.service';
+import { StarComponent } from './shared/star.component';
 
 @NgModule({
     // All the module that you will create or
@@ -15,7 +18,8 @@ import { ProductSearchPipe } from './products/productSearch.pipe';
     // Routing will declare here
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
 
     // All the components and pipe
@@ -25,7 +29,8 @@ import { ProductSearchPipe } from './products/productSearch.pipe';
         ProductComponent,
         MyUpperPipe,
         DiscountPipe,
-        ProductSearchPipe
+        ProductSearchPipe,
+        StarComponent
     ],
 
     // Only in the main module
@@ -35,7 +40,9 @@ import { ProductSearchPipe } from './products/productSearch.pipe';
     ],
 
     // All services will declare here
-    providers: []
+    providers: [
+        ProductService
+    ]
 })
 
 

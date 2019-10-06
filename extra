@@ -178,7 +178,7 @@ ages.map((age) => { return age*1});
 
 
 var ages = [0,1,2,3,4]
-ages.filter((age) => { return age*1})
+ages.filter((age) => { return ("a"+(age*1))})
 (4) [1, 2, 3, 4]
 ages.map((age) => { return age*1})
 (5) [0, 1, 2, 3, 4]
@@ -186,4 +186,12 @@ ages.map((age) => { return age*1})
 
 
 rxjs observable
-observable vs promisses
+observable vs 
+
+
+
+
+
+if we have child component and
+want to pass data from parent to child (@Input) [property Binding]
+want to pass data from child to parent (@Outpur) [event Binding]

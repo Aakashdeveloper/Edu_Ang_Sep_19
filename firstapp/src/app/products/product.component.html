@@ -1,4 +1,7 @@
-
+<h4 [ngClass]="{online: serverStatus === 'Online'}"
+    [ngStyle]="{color:getColor()}">
+    Server status is {{serverStatus}}
+</h4>
 <div class="panel panel-info">
     <div class="panel-heading">
        {{title}}
@@ -21,7 +24,7 @@
         </div>
 
         <div class="table-responnsive">
-            <table class="table" >
+            <table class="table" *ngIf="products && products.length; else noData">
                 <thead>
                     <tr style="color:teal">
                       
@@ -41,20 +44,29 @@
                 <tbody>
                     <tr *ngFor="let prod of products | productSearch:userSearch">
                         <td>
-                            <img [src]="prod.imageUrl" *ngIf="showTable"/>
+                            <img [src]="prod.imageUrl" *ngIf="showTable"
+                            [style.width.px]="imagewidth"
+                            />
                         </td>
                         <td>
                             {{prod.productName | myupper:'upper'}}
                         </td>
                         <td>{{prod.productCode | myupper:'lower'}}</td>
                         <td>{{prod.releaseDate | date}}</td>
-                        <td>{{prod.price| discount:5   | currency:'GBP' }}</td>
-                        <td>{{prod.starRating}}</td>
+                        <td [ngStyle]="{'background-color':prod.price<20?'tomato':'skyblue'}">
+                            {{prod.price| discount:5   | currency:'GBP' }}
+                        </td>
+                        <td><app-star [rating]="prod.starRating"
+                            (ratingClicked)="dataRecive($event)"></app-star></td>
 
                     </tr>
                 </tbody>
 
             </table>
+            <ng-template  #noData>
+                <img src="../../assets/loading.gif
+                "/>
+            </ng-template>
         </div>
 
     </div>
