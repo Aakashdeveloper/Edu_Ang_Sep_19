@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ProductService } from './prodduct.service';
 import { IProduct } from './product.model';
 
@@ -15,7 +15,7 @@ import { IProduct } from './product.model';
 
 })
 
-export class ProductComponent implements OnInit, OnChange, OnDestroy {
+export class ProductComponent implements OnInit, OnDestroy {
     title: string = 'Products Page';
     showTable: boolean = false;
     imagewidth = 100;
@@ -28,9 +28,6 @@ export class ProductComponent implements OnInit, OnChange, OnDestroy {
       this.serverStatus = Math.random() > 0.5 ? 'Online' : 'Offline' ;
     }
 
-    ngOnChanges(): void {
-      console.log('In side ngOnChanges');
-    }
 
     ngOnDestroy() {
       console.log('In side ngOnDestroy');
@@ -43,6 +40,7 @@ export class ProductComponent implements OnInit, OnChange, OnDestroy {
     toggleImage(): void {
         this.showTable = !this.showTable;
     }
+
 
     ngOnInit() {
       console.log('In side ngOnInit');

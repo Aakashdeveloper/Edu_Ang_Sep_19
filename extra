@@ -195,3 +195,11 @@ observable vs
 if we have child component and
 want to pass data from parent to child (@Input) [property Binding]
 want to pass data from child to parent (@Outpur) [event Binding]
+
+
+
+CLI
+
+Componentt => ng generate component orders/ ng g c orders
+Service => ng g s servicename
+Pipe=> ng g p pipeename

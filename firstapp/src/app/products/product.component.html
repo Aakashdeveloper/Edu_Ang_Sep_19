@@ -49,7 +49,11 @@
                             />
                         </td>
                         <td>
-                            {{prod.productName | myupper:'upper'}}
+                            <a [routerLink]="['/products',prod.productId]"
+                                
+                            >
+                                {{prod.productName | myupper:'upper'}}
+                            </a>
                         </td>
                         <td>{{prod.productCode | myupper:'lower'}}</td>
                         <td>{{prod.releaseDate | date}}</td>
@@ -71,3 +75,9 @@
 
     </div>
 </div>
+
+
+<!--
+    [queryParams]="{name:prod.productName,img:prod.imageUrl,
+                                details:prod.description}"
+-->
