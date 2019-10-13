@@ -2,20 +2,13 @@ import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home.component';
-import { ProductComponent } from './products/product.component';
-import { MyUpperPipe } from './products/myUpper.pipe';
-import { DiscountPipe } from './products/discount.pipe';
-import { ProductSearchPipe } from './products/productSearch.pipe';
-import { ProductService } from './products/prodduct.service';
-import { StarComponent } from './shared/star.component';
 import { OrderComponent } from './orders/order.component';
 import { NotFoundComponent } from './shared/notFound.component';
-import { ProductDetailsComponent } from './products/product-details.component';
 import { ProductModule } from './products/products.module';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     // All the module that you will create or
@@ -25,29 +18,16 @@ import { ProductModule } from './products/products.module';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        RouterModule.forRoot([
-            {path: 'home', component: HomeComponent},
-            {path: 'products', component: ProductComponent},
-            {path: 'products/:id', component: ProductDetailsComponent},
-            {path: 'orders', component: OrderComponent},
-            {path: '', redirectTo: 'home', pathMatch: 'full'},
-            {path: '**', component: NotFoundComponent}
-        ]),
-        ProductModule
+        ProductModule,
+        AppRoutingModule
     ],
 
     // All the components and pipe
     declarations: [
         AppComponent,
         HomeComponent,
-        ProductComponent,
-        MyUpperPipe,
-        DiscountPipe,
-        ProductSearchPipe,
-        StarComponent,
         OrderComponent,
-        NotFoundComponent,
-        ProductDetailsComponent
+        NotFoundComponent
     ],
 
     // Only in the main module
@@ -57,9 +37,7 @@ import { ProductModule } from './products/products.module';
     ],
 
     // All services will declare here
-    providers: [
-        ProductService
-    ]
+    providers: []
 })
 
 

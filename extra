@@ -203,3 +203,8 @@ CLI
 Componentt => ng generate component orders/ ng g c orders
 Service => ng g s servicename
 Pipe=> ng g p pipeename
+
+
+ 
+ng-pristine  ng-valid      ng-untouched
+ng-dirty     ng-invalid     ng-touched
