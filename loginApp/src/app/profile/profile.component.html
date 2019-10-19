@@ -1,0 +1,20 @@
+<h1>
+    Hi {{userinfo.name}}
+</h1>
+<h2>
+    Your role is {{userinfo.role}}
+</h2>
+<h3>
+    You have permission to 
+    {{userinfo.role === "admin" ? "Add new user": "View your profile"}}
+</h3>
+<div *ngIf="userinfo.role === 'admin'">
+    <button class="btn btn-success">
+        Register
+    </button>
+</div>
+
+<button (click)="logoutuser()" 
+    class="btn btn-danger">
+    Logout
+</button>   

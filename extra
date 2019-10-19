@@ -208,3 +208,10 @@ Pipe=> ng g p pipeename
  
 ng-pristine  ng-valid      ng-untouched
 ng-dirty     ng-invalid     ng-touched
+
+
+localStorage.setItem('userid',1)
+undefined
+localStorage.getItem('userid')
+"1"
+localStorage.removeItem('userid')
